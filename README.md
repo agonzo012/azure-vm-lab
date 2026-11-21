@@ -64,7 +64,8 @@ Azure and Microsoft 365 administration roles.
 - winvm-01-overview-screenshot.pdf — WinVM-01 Overview (Status Running,
   AlvinLab-RG, East US 2, Standard_D2als_v6, Windows Server 2022
   Datacenter, public IP 20.119.172.115)
-- winvm-01-list-screenshot.pdf — Virtual Machines list showing WinVM-01
+- winvm-01-overview-deallocating-screenshot.pdf — WinVM-01 Overview
+  after stopping (Status Deallocating, on its way to Stopped)
 - onedollarbudget-screenshot.pdf — Cost Management budget detail for
   OneDollarBudget (evaluated spend $0.00)
 
