@@ -30,6 +30,10 @@ as part of building my hands-on cloud infrastructure skills.
   compute charges stop when deallocation completes
 - Created a $1 Cost Management budget ("OneDollarBudget") with alerts at
   50% and 100% of actual cost, so spending is watched
+- Connected to WinVM-01 by RDP through Azure Bastion Developer (free SKU,
+  $0/hour) on Nov 21, 2026 — the desktop showed Server Manager open;
+  the VM was stopped (deallocated) again right after, to preserve the
+  free credit
 
 ## Why Windows Server 2022 (not Windows 11 Pro)
 
@@ -68,10 +72,18 @@ Azure and Microsoft 365 administration roles.
   after stopping (Status Deallocating, on its way to Stopped)
 - onedollarbudget-screenshot.pdf — Cost Management budget detail for
   OneDollarBudget (evaluated spend $0.00)
+- bastion-rdp-summary.pdf — Bastion Developer RDP connection summary for
+  WinVM-01 (Step 4B): free Developer SKU, connected Nov 21, 2026, desktop
+  shown, VM stopped again after. A summary, not a screenshot, because the
+  RDP desktop is a live canvas that does not survive print-to-PDF — the
+  print-to-PDF capture came out mostly blank, so this records the
+  verified connection details instead. Same approach as the Entra ID
+  summaries.
 
 ## Next Steps
 
-- Add Azure Bastion for RDP without exposing public IP
+- ~~Add Azure Bastion for RDP without exposing public IP~~ — Done Nov 21,
+  2026 (Bastion Developer, free SKU; see bastion-rdp-summary.pdf)
 - Configure NSG rules to restrict access by IP
 - Practice VM resizing and snapshotting
 - Assign RBAC roles to the Resource Group
