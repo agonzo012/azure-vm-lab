@@ -34,6 +34,23 @@ as part of building my hands-on cloud infrastructure skills.
   $0/hour) on Nov 21, 2026 — the desktop showed Server Manager open;
   the VM was stopped (deallocated) again right after, to preserve the
   free credit
+- Restricted RDP access with an NSG rule: the inbound RDP rule (priority
+  300, TCP 3389) in NSG WinVM-01-nsg now allows only a single home public
+  IP (/32) instead of Any, so the VM's public RDP port is not open to the
+  internet. Bastion access was not touched.
+- Created a snapshot of the VM's OS disk
+  (WinVM-01-osdisk-snapshot-20261121, 127 GiB, Standard HDD
+  zone-redundant, Incremental, Succeeded) on Nov 21, 2026, as a restore
+  point before further changes.
+- Assigned the Reader role on resource group AlvinLab-RG to test user
+  Alex Rivera (Entra ID), demonstrating RBAC scoping to a resource group.
+- Practiced VM resizing: resized WinVM-01 from Standard_D2als_v6 to
+  Standard_D2ls_v6 (2 vCPU, 4 GiB, same D-Series v6 family) and back to
+  Standard_D2als_v6, confirming both resizes succeeded. The first choice,
+  Standard_D2s_v3, and the v4/v5 D-series sizes were all unavailable for
+  this subscription in East US 2 ("NotAvailableForSubscription"), so the
+  resize used D2ls_v6, the available size in the same family. The VM stayed
+  stopped (deallocated) throughout.
 
 ## Why Windows Server 2022 (not Windows 11 Pro)
 
@@ -84,6 +101,11 @@ Azure and Microsoft 365 administration roles.
 
 - ~~Add Azure Bastion for RDP without exposing public IP~~ — Done Nov 21,
   2026 (Bastion Developer, free SKU; see bastion-rdp-summary.pdf)
-- Configure NSG rules to restrict access by IP
-- Practice VM resizing and snapshotting
-- Assign RBAC roles to the Resource Group
+- ~~Configure NSG rules to restrict access by IP~~ — Done Nov 21, 2026
+  (RDP rule now allows only a single home IP /32, not Any)
+- ~~Practice VM resizing and snapshotting~~ — Done Nov 21, 2026.
+  Snapshot WinVM-01-osdisk-snapshot-20261121 (127 GiB) created; resize
+  practiced D2als_v6 to D2ls_v6 and back to D2als_v6 (D2s_v3 and the v4/v5
+  D-series sizes were unavailable for this subscription in East US 2).
+- ~~Assign RBAC roles to the Resource Group~~ — Done Nov 21, 2026 (Reader
+  role on AlvinLab-RG assigned to test user Alex Rivera)
