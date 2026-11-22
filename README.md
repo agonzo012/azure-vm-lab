@@ -82,14 +82,14 @@ Azure and Microsoft 365 administration roles.
 
 ## Screenshots
 
-- winvm-01-overview-screenshot.pdf — WinVM-01 Overview (Status Running,
+- [winvm-01-overview-screenshot.pdf](winvm-01-overview-screenshot.pdf) — WinVM-01 Overview (Status Running,
   AlvinLab-RG, East US 2, Standard_D2als_v6, Windows Server 2022
   Datacenter, public IP 20.119.172.115)
-- winvm-01-overview-deallocating-screenshot.pdf — WinVM-01 Overview
+- [winvm-01-overview-deallocating-screenshot.pdf](winvm-01-overview-deallocating-screenshot.pdf) — WinVM-01 Overview
   after stopping (Status Deallocating, on its way to Stopped)
-- onedollarbudget-screenshot.pdf — Cost Management budget detail for
+- [onedollarbudget-screenshot.pdf](onedollarbudget-screenshot.pdf) — Cost Management budget detail for
   OneDollarBudget (evaluated spend $0.00)
-- bastion-rdp-summary.pdf — Bastion Developer RDP connection summary for
+- [bastion-rdp-summary.pdf](bastion-rdp-summary.pdf) — Bastion Developer RDP connection summary for
   WinVM-01 (Step 4B): free Developer SKU, connected Nov 21, 2026, desktop
   shown, VM stopped again after. A summary, not a screenshot, because the
   RDP desktop is a live canvas that does not survive print-to-PDF — the
@@ -100,7 +100,7 @@ Azure and Microsoft 365 administration roles.
 ## Next Steps
 
 - ~~Add Azure Bastion for RDP without exposing public IP~~ — Done Nov 21,
-  2026 (Bastion Developer, free SKU; see bastion-rdp-summary.pdf)
+  2026 (Bastion Developer, free SKU; see [bastion-rdp-summary.pdf](bastion-rdp-summary.pdf))
 - ~~Configure NSG rules to restrict access by IP~~ — Done Nov 21, 2026
   (RDP rule now allows only a single home IP /32, not Any)
 - ~~Practice VM resizing and snapshotting~~ — Done Nov 21, 2026.
