@@ -3,7 +3,9 @@
 ## Status
 
 Done — WinVM-01 was deployed in the Azure free trial, ran, and was then
-stopped (deallocated) to preserve the $200 free credit.
+stopped (deallocated). The whole resource group AlvinLab-RG was deleted
+Nov 22, 2026, after the work was documented here, so nothing bills the
+card after the $200 credit expires Dec 21, 2026.
 
 ## What This Is
 
@@ -68,7 +70,10 @@ paid only from the $200 free credit, $0 out of pocket.
 - $125.56/month ($0.1720/hr) while running, paid from the $200 free
   credit only — $0 out of pocket
 - Spending limit removed: the subscription was upgraded to pay-as-you-go Nov 21, 2026 (for the Front Door labs), so the credit is used first and anything beyond it would bill the card — the VM stays stopped (deallocated) when not in use, so nothing bills
-- The VM is stopped (deallocated) when not in use
+- Deleted Nov 22, 2026: the whole resource group AlvinLab-RG (VM, OS disk,
+snapshot, public IP, vnet, NSG, NIC, Bastion host) was deleted after
+documentation, so the $0.12/day storage/IP/snapshot accrual has stopped
+and nothing can bill the card after the credit expires Dec 21, 2026.
 
 ## Why It Matters
 
