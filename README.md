@@ -12,7 +12,7 @@ as part of building my hands-on cloud infrastructure skills.
 
 ## Tools Used
 
-- Microsoft Azure (free trial — $200 credit, spending limit ON)
+- Microsoft Azure (free trial — $200 credit; upgraded to pay-as-you-go Nov 21, 2026 for the Front Door labs, spending limit removed)
 - Azure Virtual Machines
 - Remote Desktop Protocol (RDP)
 - Azure Resource Groups
@@ -21,7 +21,7 @@ as part of building my hands-on cloud infrastructure skills.
 
 ## What I Built
 
-- Created a Resource Group called AlvinLab-RG in East US 2
+- Created a Resource Group called AlvinLab-RG in East US 2. Outcome: the group is live and holds WinVM-01, its network, NSG, snapshot and budget.
 - Deployed WinVM-01: Windows Server 2022 Datacenter - x64 Gen2,
   Standard_D2als_v6 (2 vCPU, 4 GiB memory), RDP on port 3389,
   administrator labadmin, public IP 20.119.172.115
@@ -29,7 +29,7 @@ as part of building my hands-on cloud infrastructure skills.
 - Stopped (deallocated) the VM after practice to preserve the free credit —
   compute charges stop when deallocation completes
 - Created a $1 Cost Management budget ("OneDollarBudget") with alerts at
-  50% and 100% of actual cost, so spending is watched
+  50% and 100% of actual cost, so spending is watched. Outcome: the budget is live with both alerts; evaluated spend $0.00.
 - Connected to WinVM-01 by RDP through Azure Bastion Developer (free SKU,
   $0/hour) on Nov 21, 2026 — the desktop showed Server Manager open;
   the VM was stopped (deallocated) again right after, to preserve the
@@ -43,7 +43,7 @@ as part of building my hands-on cloud infrastructure skills.
   zone-redundant, Incremental, Succeeded) on Nov 21, 2026, as a restore
   point before further changes.
 - Assigned the Reader role on resource group AlvinLab-RG to test user
-  Alex Rivera (Entra ID), demonstrating RBAC scoping to a resource group.
+  Alex Rivera (Entra ID), demonstrating RBAC scoping to a resource group. Outcome: Alex Rivera can read AlvinLab-RG but cannot change it.
 - Practiced VM resizing: resized WinVM-01 from Standard_D2als_v6 to
   Standard_D2ls_v6 (2 vCPU, 4 GiB, same D-Series v6 family) and back to
   Standard_D2als_v6, confirming both resizes succeeded. The first choice,
@@ -61,15 +61,13 @@ Standard_B1s is not available in East US or East US 2 for this
 subscription. Windows Server 2022 Datacenter is the closest $0
 out-of-pocket alternative — still Windows, still RDP, same region family —
 and it is free-services eligible. Cost is $125.56/month ($0.1720/hr),
-paid only from the $200 free credit, with the spending limit ON, so
-nothing comes out of my own pocket.
+paid only from the $200 free credit, $0 out of pocket.
 
 ## Cost
 
 - $125.56/month ($0.1720/hr) while running, paid from the $200 free
   credit only — $0 out of pocket
-- Spending limit ON: Azure disables the subscription when the credit is
-  exhausted, so there is no bill
+- Spending limit removed: the subscription was upgraded to pay-as-you-go Nov 21, 2026 (for the Front Door labs), so the credit is used first and anything beyond it would bill the card — the VM stays stopped (deallocated) when not in use, so nothing bills
 - The VM is stopped (deallocated) when not in use
 
 ## Why It Matters
